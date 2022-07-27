@@ -1,0 +1,69 @@
+***********************************************************************
+* MODULE NAME = Preview                                               *
+***********************************************************************
+MF110BMS  DFHMSD TYPE=&SYSPARM,MODE=INOUT,                              *
+               CTRL=(FREEKB,FRSET) 
+MF110BMS  DFHMDI SIZE=(24,80) 
+SSP5     DFHMDF POS=(1,1),LENGTH=4,INITIAL='SSP5',COLOR=NEUTRAL 
+Observation DFHMDF POS=(11,28),LENGTH=20,INITIAL='Observation',        *
+               ATTRB=PROT,COLOR=DEFAULT
+observationinp DFHMDF POS=(11,50),LENGTH=27,                           *
+               ATTRB=(UNPROT,NORM),COLOR=NEUTRAL
+         DFHMDF POS=(11,78),LENGTH=1,                                  *
+               ATTRB=ASKIP,COLOR=NEUTRAL
+selectoption DFHMDF POS=(22,7),LENGTH=14,INITIAL='Select Option',      *
+               ATTRB=PROT,COLOR=DEFAULT
+selectopinp DFHMDF POS=(22,22),LENGTH=1,                               *
+               ATTRB=(ASKIP,NORM),COLOR=NEUTRAL
+         DFHMDF POS=(22,24),LENGTH=1,                                  *
+               ATTRB=ASKIP,COLOR=NEUTRAL
+lastinput DFHMDF POS=(24,7),LENGTH=40,                                 *
+               ATTRB=(UNPROT,NORM),COLOR=NEUTRAL
+Cause    DFHMDF POS=(10,28),LENGTH=20,INITIAL='Cause',                 *
+               ATTRB=PROT,COLOR=DEFAULT
+causeinp DFHMDF POS=(10,50),LENGTH=27,                                 *
+               ATTRB=(UNPROT,NORM),COLOR=NEUTRAL
+         DFHMDF POS=(10,78),LENGTH=1,                                  *
+               ATTRB=ASKIP,COLOR=NEUTRAL
+Value    DFHMDF POS=(9,28),LENGTH=20,INITIAL='Value',                  *
+               ATTRB=PROT,COLOR=DEFAULT
+valueinp DFHMDF POS=(9,50),LENGTH=12,INITIAL='0000000000',             *
+               ATTRB=(UNPROT,NORM),COLOR=GREEN
+         DFHMDF POS=(9,63),LENGTH=1,                                   *
+               ATTRB=ASKIP,COLOR=NEUTRAL
+Paid     DFHMDF POS=(8,28),LENGTH=20,INITIAL='Paid',                   *
+               ATTRB=PROT,COLOR=DEFAULT
+paidinp  DFHMDF POS=(8,50),LENGTH=12,INITIAL='0000000000',             *
+               ATTRB=(UNPROT,NORM),COLOR=GREEN
+         DFHMDF POS=(8,63),LENGTH=1,                                   *
+               ATTRB=ASKIP,COLOR=NEUTRAL
+Claimdate DFHMDF POS=(7,28),LENGTH=20,INITIAL='Claim Date',            *
+               ATTRB=PROT,COLOR=DEFAULT
+claimdateinp DFHMDF POS=(7,50),LENGTH=12,                              *
+               ATTRB=(UNPROT,NORM),COLOR=NEUTRAL
+         DFHMDF POS=(7,63),LENGTH=1,                                   *
+               ATTRB=ASKIP,COLOR=NEUTRAL
+claimdateyears DFHMDF POS=(7,65),LENGTH=12,INITIAL='(yyyy-mm-dd)',     *
+               ATTRB=(UNPROT,NORM),COLOR=TURQUOISE
+CustomerNumber DFHMDF POS=(6,28),LENGTH=20,INITIAL='Customer Number',  *
+               ATTRB=PROT,COLOR=DEFAULT
+custinp  DFHMDF POS=(6,50),LENGTH=12,                                  *
+               ATTRB=(UNPROT,NORM),COLOR=NEUTRAL
+         DFHMDF POS=(6,63),LENGTH=1,                                   *
+               ATTRB=ASKIP,COLOR=NEUTRAL
+ClaimNumber DFHMDF POS=(4,28),LENGTH=20,INITIAL='Claim Number',        *
+               ATTRB=PROT,COLOR=DEFAULT
+claiminp DFHMDF POS=(4,50),LENGTH=12,                                  *
+               ATTRB=(UNPROT,NORM),HILIGHT=UNDERLINE,COLOR=NEUTRAL
+         DFHMDF POS=(4,63),LENGTH=1,                                   *
+               ATTRB=ASKIP,COLOR=NEUTRAL
+ClaimAdd DFHMDF POS=(5,6),LENGTH=20,INITIAL='1. Claim Add',            *
+               ATTRB=PROT,COLOR=DEFAULT
+General  DFHMDF POS=(1,10),LENGTH=35,                                  *
+               INITIAL='General Insurance Policy Claim Menu',          *
+               ATTRB=PROT,COLOR=NEUTRAL
+claiminquiry DFHMDF POS=(4,6),LENGTH=20,INITIAL='1. Claim Inquiry',    *
+               ATTRB=PROT,COLOR=DEFAULT 
+         DFHMSD TYPE=FINAL                                              
+         END                                                            
+
